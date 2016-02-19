@@ -2,6 +2,10 @@
 
 This is the securities-casus project. This project is used as a casus when selecting new hires for the company I work for.
 
+Build this project by;
+    
+    $ mvn clean install
+
 ## Main subprojects
 
 ### securities-casus-service
