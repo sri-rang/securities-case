@@ -14,7 +14,16 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<jetty.version>9.3.7.v20160115</jetty.version>
 	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>securities-casus</groupId>
+			<artifactId>securities-casus-services</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<plugins>
