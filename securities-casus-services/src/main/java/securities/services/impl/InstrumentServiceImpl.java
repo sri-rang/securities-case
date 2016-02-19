@@ -1,7 +1,6 @@
 package securities.services.impl;
 
 import java.util.Arrays;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
@@ -11,7 +10,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import securities.model.Instrument;
-import securities.model.InstrumentPrice;
+import securities.model.Price;
 import securities.services.InstrumentListener;
 import securities.services.InstrumentService;
 
@@ -49,20 +48,19 @@ public class InstrumentServiceImpl implements InstrumentService {
 		List<Instrument> instruments = findInstruments();
 		for (int i=0; i<UPDATE_COUNT;i++) {
 			Instrument instrument = instruments.get(random.nextInt(instruments.size()));
-			InstrumentPrice updatedPrice;
+			Price updatedPrice;
 			if (instrument.hasPrice()) {
 				updatedPrice = instrument.getPrice();
-				updatedPrice.setPrice(Math.max(0.2, updatedPrice.getPrice() + (random.nextDouble()-0.5)));
+				updatedPrice.setAmount(Math.max(0.2, updatedPrice.getAmount() + (random.nextDouble()-0.5)));
 			} else {
-				updatedPrice = new InstrumentPrice();
-				updatedPrice.setInstrument(instrument);
+				updatedPrice = new Price();
 				instrument.setPrice(updatedPrice);
-				updatedPrice.setPrice(random.nextDouble() * 10); //Gives a random price [0,10)
+				updatedPrice.setAmount(random.nextDouble() * 10); //Gives a random price [0,10)
 			}
-			updatedPrice.setTimestamp(new Date());
+			updatedPrice.setWhen(System.currentTimeMillis());
 			
 			for (InstrumentListener listener : listeners) {
-				listener.priceUpdated(updatedPrice);
+				listener.priceUpdated(instrument);
 			}
 		}
 		

@@ -1,8 +1,8 @@
 package securities.services;
 
-import securities.model.InstrumentPrice;
+import securities.model.Instrument;
 
 public interface InstrumentListener {
 
-	void priceUpdated(InstrumentPrice updatedPrice);
+	void priceUpdated(Instrument instrument);
 }

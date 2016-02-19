@@ -7,9 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import securities.model.InstrumentPrice;
-import securities.services.InstrumentListener;
-import securities.services.InstrumentService;
+import securities.model.Instrument;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "/autoload.xml"})
@@ -23,8 +21,8 @@ public class TestInstrumentService {
 	public void testInstrumentService() {
 		InstrumentListener listener = new InstrumentListener() {
 			@Override
-			public void priceUpdated(InstrumentPrice updatedPrice) {
-				logger.info("Price update: "+updatedPrice.getInstrument().getCode()+" -> " + updatedPrice.getPrice());
+			public void priceUpdated(Instrument instrument) {
+				logger.info("Price update: "+instrument.getCode()+" -> " + instrument.getPrice().getAmount());
 			}
 		};
 		

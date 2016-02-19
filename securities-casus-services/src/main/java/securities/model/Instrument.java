@@ -1,8 +1,9 @@
 package securities.model;
 
+
 public class Instrument {
 	private String code;
-	private InstrumentPrice price;
+	private Price price;
 	
 	public Instrument(String code) {
 		super();
@@ -15,10 +16,10 @@ public class Instrument {
 	public void setCode(String code) {
 		this.code = code;
 	}
-	public InstrumentPrice getPrice() {
+	public Price getPrice() {
 		return price;
 	}
-	public void setPrice(InstrumentPrice price) {
+	public void setPrice(Price price) {
 		this.price = price;
 	}
 	
