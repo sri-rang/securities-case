@@ -22,5 +22,5 @@ securities-casus-web implements a REST API and contains the web front-end implem
 
 ## The Assignment
 
-Please implement the securities-casus-web module using AngularJS. The module should show a page with all the instruments on them.
-Instrument price updates should be shown in this page as well.
+Please implement the securities-casus-web module using AngularJS. The module should show a page with all the instruments and their prices on them.
+Instrument price updates should preferably be shown in this page using the appropriate technology.
