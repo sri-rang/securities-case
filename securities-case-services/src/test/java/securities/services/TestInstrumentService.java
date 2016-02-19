@@ -29,7 +29,5 @@ public class TestInstrumentService {
 		instrumentService.registerListener(listener);
 		try {Thread.sleep(10000);} catch (InterruptedException e) {}
 		instrumentService.unregisterListener(listener);
-		
-		
 	}
 }

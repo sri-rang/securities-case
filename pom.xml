@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>securities-casus</groupId>
-	<artifactId>securities-casus</artifactId>
+	<groupId>securities-case</groupId>
+	<artifactId>securities-case</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
@@ -14,8 +14,8 @@
 	</properties>
 
 	<modules>
-		<module>securities-casus-services</module>
-		<module>securities-casus-web</module>
+		<module>securities-case-services</module>
+		<module>securities-case-web</module>
 	</modules>
 
 	<dependencies>
@@ -54,7 +54,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.3</version>
+				<version>3.2</version>
 				<configuration>
 					<compilerVersion>1.7</compilerVersion>
 					<source>1.7</source>

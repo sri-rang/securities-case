@@ -4,11 +4,11 @@
 
 	<parent>
 		<version>0.0.1-SNAPSHOT</version>
-		<groupId>securities-casus</groupId>
-		<artifactId>securities-casus</artifactId>
+		<groupId>securities-case</groupId>
+		<artifactId>securities-case</artifactId>
 	</parent>
 
-	<artifactId>securities-casus-web</artifactId>
+	<artifactId>securities-case-web</artifactId>
 	<packaging>war</packaging>
 
 
@@ -19,8 +19,8 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>securities-casus</groupId>
-			<artifactId>securities-casus-services</artifactId>
+			<groupId>securities-case</groupId>
+			<artifactId>securities-case-services</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
