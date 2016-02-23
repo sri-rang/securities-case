@@ -22,5 +22,5 @@ securities-case-web implements a REST API to retrieve the instrument list '/inst
 
 ## The Assignment
 
-Please extends the securities-case-web module with a AngularJS page. The AngularJS page should show all the instruments and their prices on them.
-Instrument price updates should preferably be shown in this page using the available WebSocket. 
+Please refactor the index.html to a AngularJS page. The AngularJS page should show all the instruments and their prices on them.
+Instrument price updates should preferably be shown and highlighted in this page using the available WebSocket. 
