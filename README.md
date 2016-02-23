@@ -18,9 +18,9 @@ To simulate real instrument price updates a spring scheduler is used which rando
 
 ### securities-case-web
 
-securities-case-web implements a REST API and contains the web front-end implemented with AngularJS.
+securities-case-web implements a REST API to retrieve the instrument list '/instruments' and contains a websocket to retrieve updates of instrument prices.
 
 ## The Assignment
 
-Please implement the securities-case-web module using AngularJS. The module should show a page with all the instruments and their prices on them.
-Instrument price updates should preferably be shown in this page using the appropriate technology.
+Please extends the securities-case-web module with a AngularJS page. The AngularJS page should show all the instruments and their prices on them.
+Instrument price updates should preferably be shown in this page using the available WebSocket. 
