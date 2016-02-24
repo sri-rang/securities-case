@@ -24,3 +24,5 @@ securities-case-web implements a REST API to retrieve the instrument list '/inst
 
 Please refactor the index.html to a AngularJS page. The AngularJS page should show all the instruments and their prices on them.
 Instrument price updates should preferably be shown and highlighted in this page using the available WebSocket. 
+
+please create a clone of this repository and send me a zip-file or just fork this repository and sent me the pull request!
