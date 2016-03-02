@@ -1,6 +1,6 @@
 # Securities Case Web
 
-securities-case-web implements a REST API and contains a websocket for price updates. The web front-end should be implemented with AngularJS.
+securities-case-web implements a REST API and contains a websocket for price updates. The web front-end should be implemented with AngularJS or React.
 
 After building this project it may be started by: 
 
