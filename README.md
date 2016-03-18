@@ -21,8 +21,8 @@ securities-case-web implements a REST API to retrieve the instrument list '/inst
 
 ## React Prototype
 
-- [ ] `npm` for dependency management
-- [ ] ES6 (with Babelify / Browserify module system)
+- [x] `npm` for dependency management
+- [x] ES6 (with webpack module system)
 - [ ] Integrate with maven build
 - [ ] Action for `update`
 - [ ] Reducer for `update`
