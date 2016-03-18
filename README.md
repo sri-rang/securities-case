@@ -19,10 +19,3 @@ To simulate real instrument price updates a spring scheduler is used which rando
 ### securities-case-web
 
 securities-case-web implements a REST API to retrieve the instrument list '/instruments' and contains a websocket to retrieve updates of instrument prices.
-
-## The Assignment
-
-Please refactor the index.html to a AngularJS or React page. The page should show all the instruments and their prices.
-Instrument price updates should preferably be shown and highlighted in this page using the available WebSocket. 
-
-please create a clone of this repository and send me a zip-file or sent me a pull request!
