@@ -1,7 +1,5 @@
 # Securities-Case
 
-This is the securities-case project. This project is used as a case when selecting new hires at the company I work for.
-
 Build this project by;
     
     $ mvn clean install
