@@ -17,3 +17,17 @@ To simulate real instrument price updates a spring scheduler is used which rando
 ### securities-case-web
 
 securities-case-web implements a REST API to retrieve the instrument list '/instruments' and contains a websocket to retrieve updates of instrument prices.
+
+
+## React Prototype
+
+- [ ] `npm` for dependency management
+- [ ] ES6 (with Babelify / Browserify module system)
+- [ ] Integrate with maven build
+- [ ] Action for `update`
+- [ ] Reducer for `update`
+- [ ] Store and tests for action and reducer
+- [ ] React view elements, tests if necessary
+- [ ] Code coverage tools
+- [ ] Enhancements
+- [ ] Readme / docs
