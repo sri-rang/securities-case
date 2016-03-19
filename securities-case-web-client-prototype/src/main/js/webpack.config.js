@@ -4,7 +4,7 @@ var webpack = require('webpack');
 module.exports = {
     entry: './index.js',
     output: {
-        path: path.resolve(__dirname, '..', 'webapp'),
+        path: path.resolve(__dirname, '../../../../securities-case-web/src/main/webapp'),
         filename: 'bundle.js'
     },
     module: {
