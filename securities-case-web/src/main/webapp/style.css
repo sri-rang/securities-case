@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    font-family: "DejaVu Sans", sans-serif;
+}
+
+body {
+    background: #eee;
+    color: #333;
+    padding: 24px;
+    font-size: 16px;
+}
+
+#nav {
+    padding: 0;
+    margin: 0;
+    color: #333;
+    word-spacing: 12px;
+}
+
+#nav a {
+    text-decoration: none;
+    color: #3b73b9;
+}
