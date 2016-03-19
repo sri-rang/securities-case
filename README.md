@@ -23,11 +23,11 @@ securities-case-web implements a REST API to retrieve the instrument list '/inst
 
 - [x] `npm` for dependency management
 - [x] ES6 (with webpack module system)
-- [ ] Integrate with maven build
-- [ ] Action for `update`
-- [ ] Reducer for `update`
-- [ ] Store and tests for action and reducer
+- [ ] Actions, creators and tests
+- [ ] Reducer and tests
+- [ ] Store
 - [ ] React view elements, tests if necessary
 - [ ] Code coverage tools
 - [ ] Enhancements
 - [ ] Readme / docs
+- [ ] Integrate with maven build
