@@ -24,7 +24,7 @@ const FilterInstruments = props => {
 };
 
 const state_to_props = state => {
-    return state.filter_actions;
+    return state.filter_instruments;
 };
 
 export default connect(state_to_props)(FilterInstruments);
