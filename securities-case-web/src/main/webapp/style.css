@@ -4,17 +4,19 @@
 }
 
 body {
-    background: #eee;
+    background: #fff;
     color: #333;
-    padding: 24px;
-    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
 }
 
 #nav {
     padding: 0;
-    margin: 0;
+    margin: 96px;
     color: #333;
-    word-spacing: 12px;
+    word-spacing: 24px;
+    font-size: 24px;
 }
 
 #nav a {
@@ -22,16 +24,40 @@ body {
     color: #3b73b9;
 }
 
+.row {
+    display: table-row;
+}
+
+.cell {
+    display: table-cell;
+}
+
 #FilterInstruments .link {
-    display: inline-block;
-    margin: 0 6px;
-    text-decoration: underline;
-    color: blue;
+    display: block;
+    margin: 0;
+    padding: 12px 24px 12px 12px;
+    background: #3b73b9;
+    color: #fff;
     cursor: pointer;
+    text-transform: lowercase;
 }
 
 #FilterInstruments .link.selected {
     text-decoration: none;
+    background: none;
     color: #333;
     cursor: default;
+}
+
+#Messages .row:hover {
+    background: lightyellow;
+}
+
+.Message .cell {
+    padding: 9px 12px;
+}
+
+.Amount {
+    width: 36px;
+    text-align: right;
 }

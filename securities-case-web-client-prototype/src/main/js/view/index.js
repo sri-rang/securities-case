@@ -3,7 +3,7 @@ import FilterInstruments from './FilterInstruments';
 import Messages from './Messages';
 
 const View = () => {
-    return <div>
+    return <div className='row'>
         <FilterInstruments/>
         <Messages/>
     </div>;

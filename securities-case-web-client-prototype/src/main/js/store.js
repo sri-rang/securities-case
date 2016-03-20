@@ -7,7 +7,7 @@ import actions from './actions';
 const filter_actions_default_state = {instruments: [], selected: null};
 const filter_actions = (state = filter_actions_default_state, action) => {
     if (action.type === actions.types.get_instruments) {
-        return Object.assign({}, state, {instruments: action.instruments});
+        return Object.assign({}, state, {instruments: [{code: null}, ...action.instruments]});
     }
     else if (action.type === actions.types.select_instrument) {
         return Object.assign({}, state, {selected: action.code});
@@ -20,7 +20,7 @@ const filter_actions = (state = filter_actions_default_state, action) => {
 const messages_default_state = {messages: [], selected: null};
 const messages = (state = messages_default_state, action) => {
     if (action.type === actions.types.get_message) {
-        const messages = [...state.messages, action.message];
+        const messages = [action.message, ...state.messages];
         return Object.assign({}, state, {messages});
     }
     else if (action.type === actions.types.select_instrument) {

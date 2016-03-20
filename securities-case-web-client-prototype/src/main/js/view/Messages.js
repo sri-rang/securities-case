@@ -2,8 +2,12 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 const Message = ({code, amount, when}) => {
-    const date = new Date(when).toDateString();
-    return <li>{code} {amount} {date}</li>;
+    const date = new Date(when).toLocaleTimeString();
+    return <div className='Message row'>
+        <div className='Date cell'>{date}</div>
+        <div className='Code cell'>{code}</div>
+        <div className='Amount cell'>{amount.toFixed(2)}</div>
+    </div>;
 };
 
 const Messages = props => {
@@ -20,7 +24,7 @@ const Messages = props => {
                         amount={m.price.amount}
                         when={m.price.when}/>
     });
-    return <ul>{messages}</ul>;
+    return <div id='Messages' className='cell'>{messages}</div>;
 };
 
 const state_to_props = state => {
