@@ -1,11 +1,11 @@
 /* global SockJS, Stomp */
 
-import actions from './actions';
-import store from './store';
+import store from '../store';
+import actions from '../actions';
 
-const push = {};
+const websocket = {};
 
-push.connect = () => {
+websocket.connect = () => {
     const socket = new SockJS('/stomp');
     const client = Stomp.over(socket);
     client.connect({}, () => {
@@ -18,4 +18,5 @@ push.connect = () => {
     });
 };
 
-export default push;
+
+export default websocket;
