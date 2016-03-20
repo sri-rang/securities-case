@@ -2,7 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 const Message = ({code, amount, when}) => {
-    return <li>{code} {amount}</li>;
+    const date = new Date(when).toDateString();
+    return <li>{code} {amount} {date}</li>;
 };
 
 const Messages = props => {
