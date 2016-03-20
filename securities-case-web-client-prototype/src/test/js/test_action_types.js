@@ -1,7 +1,7 @@
 /* global describe, it */
 
 import expect from 'expect';
-import types from '../../../main/js/actions/types';
+import types from '../../main/js/actions/types';
 
 describe('Types', () => {
     it('get instrument', () => {

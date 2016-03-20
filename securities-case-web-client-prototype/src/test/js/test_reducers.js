@@ -1,9 +1,9 @@
 /* global describe, it */
 
 import expect from 'expect';
-import actions from '../../../main/js/actions';
-import filter_instruments from '../../../main/js/reducers/filter_instruments';
-import messages from '../../../main/js/reducers/messages';
+import actions from '../../main/js/actions';
+import filter_instruments from '../../main/js/reducers/filter_instruments';
+import messages from '../../main/js/reducers/messages';
 
 describe('Reducer', () => {
     describe('of filter instruments', () => {

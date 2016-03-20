@@ -1,8 +1,8 @@
 /* global describe, it */
 
 import expect from 'expect';
-import types from '../../../main/js/actions/types';
-import creators from '../../../main/js/actions/creators';
+import types from '../../main/js/actions/types';
+import creators from '../../main/js/actions/creators';
 
 describe('Action', () => {
     describe('for get instruments', () => {

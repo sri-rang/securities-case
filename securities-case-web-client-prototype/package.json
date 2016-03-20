@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --require babel-core/register src/test/js/**/*.js",
+    "test": "./node_modules/.bin/mocha --require babel-core/register src/test/js/*.js --reporter=spec --no-colors",
     "dev": "./node_modules/.bin/webpack-dev-server --progress --colors --port 8081",
     "build": "./node_modules/.bin/webpack"
   },
