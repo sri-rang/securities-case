@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/jasmine-babel JASMINE_CONFIG_PATH=jasmine.json ",
+    "test": "./node_modules/.bin/jasmine-babel JASMINE_CONFIG_PATH=jasmine.json --verbose",
     "dev": "./node_modules/.bin/webpack-dev-server --progress --colors --port 8081",
     "build": "./node_modules/.bin/webpack"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "jasmine-spec-reporter": "^2.4.0",
     "react": "0.14.7",
     "react-dom": "0.14.7",
     "react-redux": "4.4.1",
