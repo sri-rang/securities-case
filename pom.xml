@@ -22,6 +22,7 @@
 	<modules>
 		<module>securities-case-services</module>
 		<module>securities-case-web</module>
+		<module>securities-case-web-client-prototype</module>
 	</modules>
 
 	<dependencies>
