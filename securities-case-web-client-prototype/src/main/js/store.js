@@ -4,6 +4,4 @@ import messages from './reducers/messages';
 
 const reducer = combineReducers({filter_instruments, messages});
 
-const store = createStore(reducer);
-
-export default store;
+export default createStore(reducer);

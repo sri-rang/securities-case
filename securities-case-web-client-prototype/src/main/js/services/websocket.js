@@ -11,12 +11,9 @@ websocket.connect = () => {
     client.connect({}, () => {
         client.subscribe('/topic/update', message => {
             const body = JSON.parse(message.body);
-            if (body) {
-                store.dispatch(actions.creator.get_message(body));
-            }
+            store.dispatch(actions.creator.get_message(body));
         });
     });
 };
-
 
 export default websocket;

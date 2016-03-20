@@ -11,13 +11,7 @@ const Message = ({code, amount, when}) => {
 };
 
 const Messages = props => {
-    let filtered;
-    if (props.selected) {
-        filtered = props.messages.filter(m => m.code === props.selected);
-    }
-    else {
-        filtered = props.messages;
-    }
+    let filtered = props.messages.filter(m => props.selected ? m.code === props.selected : true);
     const messages = filtered.map(m => {
         return <Message key={m.code + '-' + m.price.amount + + m.price.when}
                         code={m.code}
@@ -27,8 +21,6 @@ const Messages = props => {
     return <div id='Messages' className='cell'>{messages}</div>;
 };
 
-const state_to_props = state => {
-    return state.messages;
-};
+const state_to_props = state => state.messages;
 
 export default connect(state_to_props)(Messages);
