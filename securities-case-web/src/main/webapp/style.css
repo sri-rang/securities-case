@@ -21,3 +21,17 @@ body {
     text-decoration: none;
     color: #3b73b9;
 }
+
+#FilterInstruments .link {
+    display: inline-block;
+    margin: 0 6px;
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
+
+#FilterInstruments .link.selected {
+    text-decoration: none;
+    color: #333;
+    cursor: default;
+}
