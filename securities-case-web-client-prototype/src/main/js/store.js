@@ -6,17 +6,29 @@ import actions from './actions';
 
 const filter_actions_default_state = {instruments: [], selected: null};
 const filter_actions = (state = filter_actions_default_state, action) => {
-    if (action.type === actions.list.get_instruments) {
-        state = Object.assign({}, state, {instruments: action.instruments});
+    if (action.type === actions.types.get_instruments) {
+        return Object.assign({}, state, {instruments: action.instruments});
     }
-    else if (action.type === actions.list.select_instrument) {
-        state = Object.assign({}, state, {selected: action.code});
+    else if (action.type === actions.types.select_instrument) {
+        return Object.assign({}, state, {selected: action.code});
     }
-    return state;
+    else {
+        return state;
+    }
 };
 
-const messages = (state = {}, action) => {
-    return state;
+const messages_default_state = {messages: [], selected: null};
+const messages = (state = messages_default_state, action) => {
+    if (action.type === actions.types.get_message) {
+        const messages = [...state.messages, action.message];
+        return Object.assign({}, state, {messages});
+    }
+    else if (action.type === actions.types.select_instrument) {
+        return Object.assign({}, state, {selected: action.code});
+    }
+    else {
+        return state;
+    }
 };
 
 const reducer = combineReducers({filter_actions, messages});

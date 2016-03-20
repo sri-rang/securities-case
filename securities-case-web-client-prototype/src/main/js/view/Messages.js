@@ -1,8 +1,25 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
+const Message = ({code, amount, when}) => {
+    return <li>{code} {amount}</li>;
+};
+
 const Messages = props => {
-    return <div>messages</div>;
+    let filtered;
+    if (props.selected) {
+        filtered = props.messages.filter(m => m.code === props.selected);
+    }
+    else {
+        filtered = props.messages;
+    }
+    const messages = filtered.map(m => {
+        return <Message key={m.code + '-' + m.price.amount + + m.price.when}
+                        code={m.code}
+                        amount={m.price.amount}
+                        when={m.price.when}/>
+    });
+    return <ul>{messages}</ul>;
 };
 
 const state_to_props = state => {

@@ -1,24 +1,33 @@
 const actions = {};
 
-actions.list = {};
+actions.types = {};
 
-actions.list.get_instruments = 'action get instruments';
+actions.types.get_instruments = 'get instruments';
 
-actions.list.select_instrument = 'action select instrument';
+actions.types.select_instrument = 'select instrument';
+
+actions.types.get_message = 'get message';
 
 actions.creator = {};
 
 actions.creator.get_instruments = instruments => {
     return {
-        type: actions.list.get_instruments,
+        type: actions.types.get_instruments,
         instruments
     }
 };
 
 actions.creator.select_instrument = code => {
     return {
-        type: actions.list.select_instrument,
+        type: actions.types.select_instrument,
         code
+    };
+};
+
+actions.creator.get_message = message => {
+    return {
+        type: actions.types.get_message,
+        message
     };
 };
 
