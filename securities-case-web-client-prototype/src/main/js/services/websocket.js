@@ -3,6 +3,12 @@
 import store from '../store';
 import actions from '../actions';
 
+/*
+ * websocket client
+ *   uses SockJS and Stomp as in the original example
+ *   dispatches `get_message` on server push
+ */
+
 const websocket = {};
 
 websocket.connect = () => {

@@ -1,6 +1,31 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
+/*
+ * React components below are implemented as pure function
+ * Same components could also be written with classes, example:
+ *
+ *   class Message extends React.Component {
+ *       render() {
+ *           return <div>i am a link</div>;
+ *       }
+ *   }
+ *
+ * But I prefer to write them as pure functions if they don't have any internal
+ *   React 14 allows this
+ *   Pure functions are more concise and should be easier to test
+ */
+
+/**
+ * Message component
+ *      implements UI for a single message
+ *
+ * @param code
+ * @param amount
+ * @param when
+ * @returns {XML}
+ * @constructor
+ */
 const Message = ({code, amount, when}) => {
     const date = new Date(when).toLocaleTimeString();
     return <div className='Message row'>
@@ -10,6 +35,14 @@ const Message = ({code, amount, when}) => {
     </div>;
 };
 
+/**
+ * Message component
+ *      UI for (an optionally filtered) list of messages
+ *
+ * @param props
+ * @returns {XML}
+ * @constructor
+ */
 const Messages = props => {
     let filtered = props.messages.filter(m => props.selected ? m.code === props.selected : true);
     const messages = filtered.map(m => {

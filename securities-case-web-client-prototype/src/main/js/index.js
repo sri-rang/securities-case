@@ -5,6 +5,13 @@ import services from './services';
 import store from './store';
 import View from './view';
 
+/*
+ * onload
+ *   call the rest service for instruments
+ *   start listening to the websocket channel for messages
+ *   render the view
+ */
+
 window.addEventListener('load', function () {
     services.rest.get_instruments();
     services.websocket.connect();
