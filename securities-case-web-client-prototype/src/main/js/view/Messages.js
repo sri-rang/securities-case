@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
  *
  *   class Message extends React.Component {
  *       render() {
- *           return <div>i am a link</div>;
+ *           return <div>hello world</div>;
  *       }
  *   }
  *

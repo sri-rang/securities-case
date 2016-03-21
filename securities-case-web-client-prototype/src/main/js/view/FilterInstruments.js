@@ -9,11 +9,11 @@ import store from '../store';
  *
  *   class Link extends React.Component {
  *       render() {
- *           return <div>i am a link</div>;
+ *           return <div>hello world</div>;
  *       }
  *   }
  *
- * But I prefer to write them as pure functions if they don't have any internal
+ * But I prefer to write them as pure functions if they don't have any internal state
  *   React 14 allows this
  *   Pure functions are more concise and should be easier to test
  */
