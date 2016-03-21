@@ -24,64 +24,60 @@ securities-case-web implements a REST API to retrieve the instrument list '/inst
 
 ### securities-case-web-client-prototype
 
-#### getting started
-
-```
-# first install node on your machine, then..
-
-cd securities-case-web-client-prototype
-npm install                             # install deps
-npm run test                            # run tests
-npm run build                           # build
-
-cd ../securities-case-web
-mvn spring-boot:run                     # start app server
-google-chrome http://localhost:8080/    # view prototype in browser
-
-# maven integration
-# npm install, build and test are integrated
-# with the maven build cycle
-
-mvn clean install
-
-# should get dependencies, build and test the prototype
-# see securities-case-web-client-prototype/pom.xml for more
-
-```
-
-#### the implementation / cliff notes
-
-- es6 / es2015 with babeljs
-    - nothing fancy, just a nicer concise version of js
-- manage dependencies with npm
-- react
-    - defines the UI as a function of state
+- Libs / frameworks / tools:
+    - `babeljs` for ES6 support - nicer, concise version of JS
+    - `npm` for dependency management and build lifecycle
+    - `mocha` for test along with the `expect` library
+- React
+    - UI as a function of state
         - `(state) => UI`
     - pure functions
     - compose-able components
-- use redux
-    - actions
+    - sync's state with UI
+- Redux
+    - Actions
         - all possible actions that may occur, including:
             - rest api response
             - websocket push message
             - user interaction with the UI
         - provide helpers to create actions
-    - store
-        - state tree
-        - state is immutable
+    - Store
+        - provides a state tree
         - provides an event store for all actions
             - `dispatch()` for new actions
-    - reducers
+    - Reducers
         - reduce an action into a new state
         - `(old_state, action) => new_state`
-    - glued into react UI with `redux-react`
-        - render when new state
-- integrated with maven
-- tested with `mocha`
-
-#### test output
+        - state must be immutable
+    - `redux-react` glues everything together
+- Integrated with maven
+- Tested with `mocha`
+- Sources: `securities-case-web-client-prototype/src/main/js`
+- Tests: `securities-case-web-client-prototype/src/test/js`
 
 ```
+# First install node.js and then..
+
+cd securities-case-web-client-prototype
+npm install                             # Install deps
+npm run test                            # Run tests
+npm run build                           # Build
+
+cd ../securities-case-web
+mvn spring-boot:run                     # Start app server
+google-chrome http://localhost:8080/    # View prototype in browser
+
+# Maven integration
+# npm install, build and test are integrated
+# with the maven build cycle...
+
+mvn clean install
+
+# ...will get dependencies, build and test the prototype
+# See securities-case-web-client-prototype/pom.xml for more
+
+# Test output
+
   Action
     for get instruments
       ✓ should exist
@@ -158,5 +154,4 @@ mvn clean install
 
 
   43 passing (19ms)
-
-``
+```
